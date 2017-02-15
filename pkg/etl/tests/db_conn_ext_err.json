@@ -1,0 +1,8 @@
+{
+    "databases": [
+        {
+            "name": "dbExtErr",
+            "file_name": "NONEXISTENT.json"
+        }
+    ]
+}

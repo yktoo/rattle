@@ -1,0 +1,10 @@
+{
+    "databases": [
+        {
+            "name": "db",
+            "connection": "a",
+            "username": "b",
+            "password": "c"
+        }
+    ]
+}

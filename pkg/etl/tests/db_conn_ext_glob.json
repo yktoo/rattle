@@ -1,0 +1,8 @@
+{
+    "databases": [
+        {
+            "name": "dbExtGlob",
+            "file_name": "{PATH_FROM_GLOBAL}"
+        }
+    ]
+}

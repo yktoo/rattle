@@ -1,0 +1,10 @@
+{
+    "databases": [
+        {
+            "name": "dbBase64",
+            "connection": "Secret",
+            "username": "Facility",
+            "password": "BASE64:VG9wU2VjcmV0"
+        }
+    ]
+}

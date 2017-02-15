@@ -1,0 +1,8 @@
+{
+    "databases": [
+        {
+            "name": "dbExt",
+            "file_name": "db_conn_extdef.json"
+        }
+    ]
+}

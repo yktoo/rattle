@@ -1,0 +1,9 @@
+{
+    "databases": [
+        {
+            "name": "dbIncomplete",
+            "connection": "a",
+            "username": "b"
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+{
+  "module": "etl.tests.dummy_handlers",
+  "class": "EmptyHandler",
+  "p1": 100
+}

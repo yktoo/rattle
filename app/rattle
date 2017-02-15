@@ -1,0 +1,64 @@
+#!/usr/bin/env python3
+"""
+Abstract
+    A flexible data integration or ETL (Extract, Transform, Load) program. What it does, is completely defined by the
+    configuration file whose name is passed on the command line.
+
+Options and arguments
+    Run the program with the '-h' command line option to get information about options and arguments.
+"""
+import sys
+import argparse
+import etl.loader
+import etl.errors
+
+
+if __name__ == '__main__':
+    # Prepare command-line parser
+    parser = argparse.ArgumentParser(description='Modular data integration application.')
+    parser.add_argument(
+        'config_file',
+        action='store',
+        help='path to a JSON configuration file')
+    parser.add_argument(
+        '-n', '--dry-run',
+        action='store_true',
+        help='do not make any changes to the database')
+    parser.add_argument(
+        '-v', '--verbose',
+        action='store_true',
+        help='force use of verbose logging, overrides configuration file setting, takes precedence over -V')
+    parser.add_argument(
+        '-V', '--no-verbose',
+        action='store_true',
+        help='force use of non-verbose logging, overrides configuration file setting')
+    parser.add_argument(
+        '-g', '--add-global',
+        action='append',
+        metavar='NAME=VALUE',
+        dest='globals',
+        default=[],
+        help='register a global parameter, overrides same-named parameter in the configuration file (if any). '
+             'This option can be given multiple times')
+
+    # Parse command-line arguments
+    args = parser.parse_args()
+
+    # Check for verbosity overrides
+    if not args.verbose and not args.no_verbose:
+        verbose = None
+    else:
+        verbose = args.verbose or not args.no_verbose
+
+    # Parse global overrides
+    global_overrides = {}
+    for param in args.globals:
+        name, sep, val = param.partition('=')
+        if sep != '=':
+            raise etl.errors.EtlError('Global parameters must be specified in the format "NAME=VALUE".')
+        global_overrides[name] = val
+
+    # Instantiate and run a loader
+    ldr = etl.loader.Loader(args.config_file, verbose, args.dry_run, global_overrides)
+    if not ldr.run():
+        sys.exit(1)

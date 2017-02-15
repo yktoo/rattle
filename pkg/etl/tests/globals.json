@@ -1,0 +1,6 @@
+{
+  "globals": {
+    "param_a": "A",
+    "param_b": 14
+  }
+}
