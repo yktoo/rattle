@@ -16,7 +16,7 @@ A special type of [ETL configuration](configuration-file-format.md) entry, `hand
 
 | Key name | Type | Mandatory | Description |
 |----------|------|-----------|-------------|
-|`module`  |String|    Yes    |Python module containing handler code. Can be either a fully qualified name that includes package name, or a simple name that is considered one of the [standard library handlers](standard-handlers.md) (i.e. the `etl.handlers` package).|
+|`module`  |String|    Yes    |Python module containing handler code. Can be either a fully qualified name that includes package name, or a simple name that is considered one of the [standard library handlers](std-handlers/index.md) (i.e. the `etl.handlers` package).|
 |`class`   |String|    No     |Handler class to instantiate. Optional, the default is `Handler`.|
 |`comment` |String|    No     |Additional info about the step the handler executes. Can contain references to other configuration parameters in the form `"{param_name}"`.|
 |          |      |           |*(any other handler-specific parameters)*|
