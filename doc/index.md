@@ -29,7 +29,7 @@ where:
 
 The key parameter that must be supplied to the application is a configuration file, please refer to the [Configuration file format](configuration-file-format.md) page for details and examples.
 
-The application is shipped with a number of [standard handlers](standard-handlers.md) capable of executing basic ETL operations.
+The application is shipped with a number of [standard handlers](std-handlers/index.md) capable of executing basic ETL operations.
 
 ## Requirements
 
@@ -50,3 +50,7 @@ To create a distribution package, run:
 ```bash
 python3 setup.py sdist
 ```
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
