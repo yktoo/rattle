@@ -27,4 +27,4 @@ At its top level, this file contains the following objects:
 ## See also
 
 * Handler configuration
-* Configuration examples
+* [Configuration examples](configuration-examples.md)
