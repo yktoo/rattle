@@ -1,0 +1,12 @@
+language: python
+python:
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "nightly"
+
+# Install dependencies
+install: "pip install nose"
+
+# Command to run tests
+script: nosetests -v pkg/
