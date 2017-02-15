@@ -23,11 +23,11 @@ where:
 * `-g NAME = VALUE , --add-global NAME = VALUE`<br>
   Register a global parameter named NAME having value VALUE . Overrides same-named parameter in the GLOBALS section of the configuration file, if any. This option can be used to register multiple parameters, in which case it has to be repeated the required number of times.
 * `config_file`<br>
-  Path to a JSON configuration file.
+  Path to a JSON [configuration file](configuration-file-format.md).
 
 ## Description
 
-The key parameter that must be supplied to the application is a configuration file, please refer to the [Configuration file format](configuration-file-format.md) page for details and examples.
+The key parameter that must be supplied to the application is a configuration file, please refer to the [Configuration file format](configuration-file-format.md) page for details and the [Configuration examples](configuration-examples.md) page.
 
 The application is shipped with a number of [standard handlers](std-handlers/index.md) capable of executing basic ETL operations.
 
