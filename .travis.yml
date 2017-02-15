@@ -6,7 +6,7 @@ python:
   - "nightly"
 
 # Install dependencies
-install: "pip install nose"
+install: "pip install nose lxml"
 
 # Command to run tests
 script: nosetests -v pkg/
